@@ -1,0 +1,243 @@
+
+/*Importo fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    --blancoCrema: rgb(227, 227, 227); /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
+}
+
+/*estilos generales en todo el documento*/
+
+* {
+    box-sizing: border-box;
+    margin: 0; /*Borramos margin y padding por defecto*/
+    padding: 0;
+    font-family: 'Figtree', sans-serif; 
+
+}
+
+body{
+    background-color: rgb(26, 26, 26);
+}
+
+header{
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 5px 10%;
+    border-bottom: 3px solid rgb(227, 227, 227);
+}
+
+/*Quito subrayado de los enlaces*/
+a {
+    text-decoration: none;
+}
+
+.logo img {
+    width: 35px; /* Ajusta el ancho deseado */
+    height: auto; /* Mantén la proporción de aspecto original */
+}
+
+/*Estilo de links del nav (tienda, gratis, nosotros)*/
+
+div.nav-link-container {
+    width: 800px; /* Ajusta este valor según el ancho máximo deseado */
+}
+
+ul.nav-links {
+
+    margin-right: 20px;
+    list-style: none; /* Quito viñetas de la lista*/
+    
+}
+
+ul.nav-links li {
+    display: inline; /* Ordenamos la lista de forma horizontal*/
+    margin: 50px;
+    
+}
+
+ul.nav-links li a {
+    text-decoration: none;
+    position: relative;
+    color: var(--blancoCrema);
+    transition: color 0.5s ease; /*Transicion color*/
+
+}
+
+/*Animacion de subrayado cuando situamos el mouse encima*/
+
+ul.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Grosor del subrayado */
+    bottom: -4px;
+    left: 0;
+    background-color: orange; /* Color del subrayado */
+    transform: scaleX(0); /* Inicialmente, el subrayado está oculto */
+    transform-origin: 0 100%;
+    transition: transform 0.3s ease-in-out; /* Agregar una transición suave */
+    
+}
+
+ul.nav-links li a:hover::after {
+    transform: scaleX(1); /* Muestra el subrayado en el hover */
+    
+}
+
+/*Cambio de color cuando situamos el mouse encima*/
+
+ul.nav-links li a:hover {
+    color: orange; 
+}
+
+/*Estilos de iconos del header*/
+div.nav-icons a {
+    margin: 5px;
+    color: var(--blancoCrema);
+    vertical-align: middle
+
+}
+
+div.nav-icons a span.material-symbols-outlined {
+    font-size: 22px; 
+    transition: color 0.5s ease; /* Agrega una transición suave de 0.3 segundos */
+}
+
+/*Cambio de color cuando situamos el mouse encima*/
+
+div.nav-icons a:hover span.material-symbols-outlined {
+    color: orange; 
+}
+
+
+/*MAIN*/
+
+/*BUSCADOR*/
+
+.searching {
+    display: flex;
+    align-items: center;
+    width: 712px;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: black
+
+
+
+}
+ 
+/*CONTENEDOR DE BUSCADOR*/
+.searching span {
+    font-size: 17px;
+    margin-left: 10px;
+    color: var(--blancoCrema);
+}
+
+#buscador {
+    all: unset; /* Elimina todos los estilos */
+    margin-left: 5px;
+    margin-top: 0px;
+    width: 600px;
+    color: var(--blancoCrema);
+}
+
+/*TEXTO buscar productos...*/
+#buscador::placeholder {
+    font-size: 13px;
+    opacity: 0.8; /* Ajusta el valor de opacidad según tus preferencias */
+}
+
+
+/*PRODCUTOS STORE*/
+
+
+.main-store {
+    padding: 5px 10%;
+}
+
+/* Estilos para la sección de la tienda */
+.store {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Primera y tercera columna con 1fr (toma el espacio restante), segunda columna automática */
+    gap: 20px; /* Espacio entre las cajas */
+    grid-auto-flow: row; /* Asegura que las cajas fluyan hacia abajo en lugar de hacia la derecha */
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+
+}
+
+
+
+/* Estilos para los productos */
+.product {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro se apilen verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente dentro de cada caja */
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.img-product {
+    width: 340px;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente dentro de su contenedor */
+    justify-content: center; /* Centra la imagen horizontalmente dentro de su contenedor */
+}
+
+.img-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid var(--blancoCrema);
+    transition: border-color 0.5s ease;
+}
+
+.product:hover img {
+    border: 2px solid orange;
+}
+
+.description h3 {
+    font-size: 16px; /* Ajusté el tamaño del título */
+    margin: 5px 0;
+}
+
+.author {
+    font-size: 14px; /* Ajusté el tamaño del texto */
+    margin: 5px 0;
+}
+
+.stars {
+    font-size: 21px; /* Ajusta el tamaño de las estrellas según tus preferencias */
+}
+
+.product span.price {
+    font-size: 16px; /* Ajusté el tamaño del precio */
+    font-weight: bold;
+}
+
+/* Inicialmente, oculta la descripción */
+.product .description {
+    color: var(--blancoCrema);
+    max-height: 200px;
+    margin-top: 10px;
+    overflow: hidden; /* Evita que el contenido oculto se muestre */
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* Cuando el mouse está sobre .product:hover, muestra .description */
+.product:hover .description {
+    
+    opacity: 1;
+}
+
+
