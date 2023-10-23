@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
 
 :root {
-    --blancoCrema: rgb(227, 227, 227); /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
+    --blancoCrema: rgb(48, 48, 48); /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
+    --SecondaryColor: rgb(0, 0, 0);
+    --BgColor: rgb(238, 238, 238);
+    --TextColor: rgb(253, 253, 253);
 }
 
 /*estilos generales en todo el documento*/
@@ -17,22 +20,44 @@
 }
 
 body{
-    background-color: rgb(26, 26, 26);
+    background-color: var(--BgColor);
 }
 
 header{
-    background-color: rgb(26, 26, 26);
+    background-color: var(--BgColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 70px;
     padding: 5px 10%;
-    border-bottom: 3px solid rgb(227, 227, 227);
+    border-bottom: 3px solid var(--blancoCrema);
 }
+
+/*Header Tienda*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#tienda-link:hover #dropdown-menu {
+    display: block;
+}
+
+
 
 /*Quito subrayado de los enlaces*/
 a {
     text-decoration: none;
+}
+
+h1 {
+    color: var(--blancoCrema);
 }
 
 .logo img {
@@ -76,7 +101,7 @@ ul.nav-links li a::after {
     height: 1px; /* Grosor del subrayado */
     bottom: -4px;
     left: 0;
-    background-color: orange; /* Color del subrayado */
+    background-color: var(--SecondaryColor); /* Color del subrayado */
     transform: scaleX(0); /* Inicialmente, el subrayado está oculto */
     transform-origin: 0 100%;
     transition: transform 0.3s ease-in-out; /* Agregar una transición suave */
@@ -91,7 +116,7 @@ ul.nav-links li a:hover::after {
 /*Cambio de color cuando situamos el mouse encima*/
 
 ul.nav-links li a:hover {
-    color: orange; 
+    color: var(--SecondaryColor);
 }
 
 /*Estilos de iconos del header*/
@@ -110,7 +135,7 @@ div.nav-icons a span.material-symbols-outlined {
 /*Cambio de color cuando situamos el mouse encima*/
 
 div.nav-icons a:hover span.material-symbols-outlined {
-    color: orange; 
+    color: var(--SecondaryColor);; 
 }
 
 
@@ -124,6 +149,8 @@ div.nav-icons a:hover span.material-symbols-outlined {
     width: 712px;
     height: 30px;
     margin-top: 20px;
+    margin-bottom: 120px;
+    margin-left: 80px;
     border: none;
     border-radius: 10px;
     background-color: black
@@ -136,7 +163,7 @@ div.nav-icons a:hover span.material-symbols-outlined {
 .searching span {
     font-size: 17px;
     margin-left: 10px;
-    color: var(--blancoCrema);
+    color: var(--TextColor);
 }
 
 #buscador {
@@ -144,7 +171,7 @@ div.nav-icons a:hover span.material-symbols-outlined {
     margin-left: 5px;
     margin-top: 0px;
     width: 600px;
-    color: var(--blancoCrema);
+    color: var(--TextColor);
 }
 
 /*TEXTO buscar productos...*/
@@ -202,7 +229,7 @@ div.nav-icons a:hover span.material-symbols-outlined {
 }
 
 .product:hover img {
-    border: 2px solid orange;
+    border: 2px solid var(--SecondaryColor);;
 }
 
 .description h3 {
@@ -229,15 +256,57 @@ div.nav-icons a:hover span.material-symbols-outlined {
     color: var(--blancoCrema);
     max-height: 200px;
     margin-top: 10px;
-    overflow: hidden; /* Evita que el contenido oculto se muestre */
-    opacity: 0;
-    transition: opacity 0.6s ease;
+
 }
 
-/* Cuando el mouse está sobre .product:hover, muestra .description */
-.product:hover .description {
-    
-    opacity: 1;
+
+
+
+/*Login*/
+
+/* Copia y pega tus estilos CSS actuales aquí o enlaza el archivo CSS externo si lo tienes */
+
+/* Agrega estilos específicos para la página de registro/inicio de sesión */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 10vh;
 }
 
+.login-container h1 {
+    color: var(--blancoCrema);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    background-color: var(--SecondaryColor);
+    color: var(--TextColor);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: var(--SecondaryColor);
+}
 

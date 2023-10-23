@@ -5,22 +5,119 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Array de Productos
     const products = [
-        { name: 'Teenage Font', author: 'New Display Fonts', price: 'FREE', stars: '★★★★☆', image: 'img/imagen-producto-1.jpg' },
-        { name: 'Orange 3D', author: 'BlenderCreator01', price: '$300 ARS', stars: '★★★☆☆', image: 'img/imagen-producto-2.jpg' },
-        { name: 'E-book JavaScript: The Good Parts', author: 'Douglas Crockford', price: '$10.000 ARS', stars: '★★★★★', image: 'img/imagen-producto-3.jpg' },
-        { name: 'Product 4', author: 'Author 4', price: '$20 ARS', stars: '★★★☆☆', image: 'img/imagen-producto-4.jpg' },
-        { name: 'Product 5', author: 'Author 5', price: '$50 ARS', stars: '★★★★★', image: 'img/imagen-producto-5.jpg' },
-        { name: 'Product 6', author: 'Author 6', price: '$15 ARS', stars: '★★★★☆', image: 'img/imagen-producto-6.jpg' },
-        { name: 'Product 7', author: 'Author 7', price: '$30 ARS', stars: '★★★☆☆', image: 'img/imagen-producto-7.jpg' },
-        { name: 'Product 8', author: 'Author 8', price: '$25 ARS', stars: '★★★★★', image: 'img/imagen-producto-8.jpg' },
-        { name: 'Product 9', author: 'Author 9', price: '$40 ARS', stars: '★★★★☆', image: 'img/imagen-producto-9.jpg' },
-        { name: 'Product 10', author: 'Author 10', price: '$18 ARS', stars: '★★★☆☆', image: 'img/imagen-producto-10.jpg' },
-        { name: 'Product 11', author: 'Author 11', price: '$60 ARS', stars: '★★★★★', image: 'img/imagen-producto-11.jpg' },
-        { name: 'Product 12', author: 'Author 12', price: '$22 ARS', stars: '★★★★☆', image: 'img/imagen-producto-12.jpg' },
-        { name: 'Product 13', author: 'Author 13', price: '$45 ARS', stars: '★★★☆☆', image: 'img/imagen-producto-13.jpg' },
-        { name: 'Product 14', author: 'Author 14', price: '$27 ARS', stars: '★★★★★', image: 'img/imagen-producto-14.jpg' },
-        { name: 'Product 15', author: 'Author 15', price: '$35 ARS', stars: '★★★★☆', image: 'img/imagen-producto-15.jpg' }
+        { 
+            name: 'Teenage Font', 
+            author: 'New Display Fonts', 
+            url: 'img/imagen-producto-1.jpg',
+            stars: '★★★★☆', 
+            image: 'img/imagen-producto-1.jpg',
+            category: "Video",
+
+        },
+        { 
+            name: 'Orange 3D', 
+            author: 'BlenderCreator01', 
+            url: '', 
+            stars: '★★★☆☆', 
+            image: 'img/imagen-producto-2.jpg',
+            category: "Video",
+            
+        },
+        { 
+            name: 'E-book JavaScript: The Good Parts', 
+            author: 'Douglas Crockford', 
+            url: '', 
+            stars: '★★★★★', 
+            image: 'img/imagen-producto-3.jpg',
+            category: "Video",
+            
+        },
+        { 
+            name: 'Product 4', 
+            author: 'Author 4', 
+            url: '', 
+            stars: '★★★☆☆', 
+            image: 'img/imagen-producto-4.jpg'
+        },
+        { 
+            name: 'Product 5', 
+            author: 'Author 5', 
+            url: '', 
+            stars: '★★★★★', 
+            image: 'img/imagen-producto-5.jpg'
+        },
+        { 
+            name: 'Product 6', 
+            author: 'Author 6', 
+            url: '', 
+            stars: '★★★★☆', 
+            image: 'img/imagen-producto-6.jpg'
+        },
+        { 
+            name: 'Product 7', 
+            author: 'Author 7', 
+            url: '', 
+            stars: '★★★☆☆', 
+            image: 'img/imagen-producto-7.jpg'
+        },
+        { 
+            name: 'Product 8', 
+            author: 'Author 8', 
+            url: '',
+            stars: '★★★★★', 
+            image: 'img/imagen-producto-8.jpg'
+        },
+        { 
+            name: 'Product 9', 
+            author: 'Author 9', 
+            url: '', 
+            stars: '★★★★☆', 
+            image: 'img/imagen-producto-9.jpg'
+        },
+        { 
+            name: 'Product 10', 
+            author: 'Author 10', 
+            url: '', 
+            stars: '★★★☆☆', 
+            image: 'img/imagen-producto-10.jpg'
+        },
+        { 
+            name: 'Product 11', 
+            author: 'Author 11', 
+            url: '', 
+            stars: '★★★★★', 
+            image: 'img/imagen-producto-11.jpg'
+        },
+        { 
+            name: 'Product 12', 
+            author: 'Author 12', 
+            url: '', 
+            stars: '★★★★☆', 
+            image: 'img/imagen-producto-12.jpg'
+        },
+        { 
+            name: 'Product 13', 
+            author: 'Author 13', 
+            url: '', 
+            stars: '★★★☆☆', 
+            image: 'img/imagen-producto-13.jpg'
+        },
+        { 
+            name: 'Product 14', 
+            author: 'Author 14', 
+            url: '', 
+            stars: '★★★★★', 
+            image: 'img/imagen-producto-14.jpg'
+        },
+        { 
+            name: 'Product 15', 
+            author: 'Author 15', 
+            url: '', 
+            stars: '★★★★☆', 
+            image: 'img/imagen-producto-15.jpg'
+        }
     ];
+    
 
   
     function renderProducts(productList, productsToRender) {
@@ -29,9 +126,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Itera sobre la lista de productos y crea elementos para cada uno
         productsToRender.forEach(product => {
-            //nuevo elemento div html almacenado en la variable productElement
+            //Nuevo elemento div html almacenado en la variable productElement
             const productElement = document.createElement('div');
-            //asignarle a ese mismo elemento la clase product
+            //Asignarle a ese mismo elemento la clase product
             productElement.classList.add('product');
 
             // Colocamos nuestro codigo html del producto dentro de ese div
@@ -42,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="description">
                     <h3>${product.name}</h3>
                     <p class="author">${product.author}</p>
-                    <span class="price">${product.price}</span>
+                    <a href="${product.url}" download>Descargar</a>
                     <p class="stars">${product.stars}</p>
                 </div>
             `;
@@ -55,8 +152,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializar la lista de productos
     renderProducts(storeSection, products);
 
-    // Crear constante del input de búsqueda
+    // Obtenemos el input de búsqueda y lo almacenamos en una variable
     const searchInput = document.getElementById('buscador');
+    // obtenemos boton de categorias
+    const categoryButtons = document.querySelectorAll('.category-button');
 
     // Escucha el evento de cambio en el input de búsqueda
     searchInput.addEventListener('input', function () {
@@ -68,4 +167,17 @@ document.addEventListener('DOMContentLoaded', function () {
         product.author.toLowerCase().includes(searchTerm));
         renderProducts(storeSection, filteredProducts);
     });
+
+        // Escucha el evento de clic en los botones de categoría
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const category = button.getAttribute('data-category');
+                const filteredByCategory = products.filter(product => product.category === category);
+                renderProducts(storeSection, filteredByCategory);
+            });
+        });
+
 });
+
+
+
