@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Página de Imágenes</title>
+</head>
+<body>
+    <header class="header">
+
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Art-Commerce</h1>
+                </a>
+            </div>
+            <div class="nav-link-container">
+                <ul class="nav-links">
+                    <li><a href="Página de Imágenes.html">Imagenes</a></li>
+                    <li><a href="Página de Videos.html">Videos</a></li>
+                    <li><a href="Página de Fuentes.html">Fuentes</a></li>
+                    <li><a href="Página de Software & More.html">Software & Más</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <a href="">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+                <a href="">
+                    <span class="material-symbols-outlined">info</span>
+                </a>
+                <a href="">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+
+            </div>
+
+    </header>
+
+    <main class="main-store">
+        <br>
+        <h2>Imagenes</h2>
+
+        <div class="searching">
+            <span class="material-symbols-outlined">search</span>
+            <input type="search" id="buscador" name="q" placeholder="Buscar productos..." />
+        </div>
+
+        <div class="category-container">
+        <button class="category-button" data-category="Texturas">Texturas</button>
+        <button class="category-button" data-category="Render">Renders</button>
+        <button class="category-button" data-category="PNG">PNG</button>
+        <button class="category-button" data-category="Otro">Otro</button>
+        </div>
+
+        <section class="store" id="image-store">
+        </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

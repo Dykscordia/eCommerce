@@ -16,7 +16,7 @@ def get_unsplash_images(query, api_key, count=11):
 def download_images():
     # Lista de URLs de imágenes desde Unsplash
     unsplash_api_key = 'xnvchI_swWb5AJOkNuaObxe8E6k_sVKJXGj3v3XKlTM'
-    image_urls = get_unsplash_images(query='digital', api_key=unsplash_api_key)
+    image_urls = get_unsplash_images(query='textures', api_key=unsplash_api_key)
 
     # Carpeta de destino para las imágenes
     output_folder = 'img'

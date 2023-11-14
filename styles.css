@@ -7,6 +7,7 @@
     --SecondaryColor: rgb(0, 0, 0);
     --BgColor: rgb(238, 238, 238);
     --TextColor: rgb(253, 253, 253);
+    --extracolor: rgb(0, 183, 255);
 }
 
 /*estilos generales en todo el documento*/
@@ -33,21 +34,6 @@ header{
     border-bottom: 3px solid var(--blancoCrema);
 }
 
-/*Header Tienda*/
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-#tienda-link:hover #dropdown-menu {
-    display: block;
-}
 
 
 
@@ -58,7 +44,14 @@ a {
 
 h1 {
     color: var(--blancoCrema);
+    font-size: 25px;
 }
+h2 {
+    color: var(--blancoCrema);
+    font-size: 15px;
+}
+
+
 
 .logo img {
     width: 35px; /* Ajusta el ancho deseado */
@@ -149,8 +142,8 @@ div.nav-icons a:hover span.material-symbols-outlined {
     width: 712px;
     height: 30px;
     margin-top: 20px;
-    margin-bottom: 120px;
-    margin-left: 80px;
+    margin-bottom: 20px;
+
     border: none;
     border-radius: 10px;
     background-color: black
@@ -180,6 +173,33 @@ div.nav-icons a:hover span.material-symbols-outlined {
     opacity: 0.8; /* Ajusta el valor de opacidad según tus preferencias */
 }
 
+/*BOTONES CATEGORIAS*/
+
+.category-container {
+
+
+    margin-bottom: 20px;
+    height: 30px;
+
+
+}
+
+.category-button {
+    height: 30px;
+    width: 60px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: var(--SecondaryColor);
+    color: var(--TextColor);
+    cursor: pointer;
+    
+}
+.category-button:hover {
+
+        border: 2px solid var(--extracolor);
+}
+
 
 /*PRODCUTOS STORE*/
 
@@ -200,6 +220,7 @@ div.nav-icons a:hover span.material-symbols-outlined {
 
 
 
+
 /* Estilos para los productos */
 .product {
     display: flex;
@@ -208,6 +229,7 @@ div.nav-icons a:hover span.material-symbols-outlined {
     text-align: center;
     border-radius: 15px;
     box-sizing: border-box;
+    
 }
 
 .img-product {

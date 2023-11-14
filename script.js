@@ -1,125 +1,95 @@
-//Escucha de evento para que ejecute el script cuando todo el dom este completamente cargado
-document.addEventListener('DOMContentLoaded', function () {
-    //Creo constante de la seccion store 
-    const storeSection = document.querySelector('.store');
 
-    // Array de Productos
-    const products = [
-        { 
-            name: 'Teenage Font', 
-            author: 'New Display Fonts', 
-            url: 'img/imagen-producto-1.jpg',
-            stars: '★★★★☆', 
-            image: 'img/imagen-producto-1.jpg',
-            category: "Video",
+class Product {
+    constructor(name, author, url, stars, image, category) {
+        this.name = name;
+        this.author = author;
+        this.url = url;
+        this.stars = stars;
+        this.image = image;
+        this.category = category;
+    }
+}
 
-        },
-        { 
-            name: 'Orange 3D', 
-            author: 'BlenderCreator01', 
-            url: '', 
-            stars: '★★★☆☆', 
-            image: 'img/imagen-producto-2.jpg',
-            category: "Video",
-            
-        },
-        { 
-            name: 'E-book JavaScript: The Good Parts', 
-            author: 'Douglas Crockford', 
-            url: '', 
-            stars: '★★★★★', 
-            image: 'img/imagen-producto-3.jpg',
-            category: "Video",
-            
-        },
-        { 
-            name: 'Product 4', 
-            author: 'Author 4', 
-            url: '', 
-            stars: '★★★☆☆', 
-            image: 'img/imagen-producto-4.jpg'
-        },
-        { 
-            name: 'Product 5', 
-            author: 'Author 5', 
-            url: '', 
-            stars: '★★★★★', 
-            image: 'img/imagen-producto-5.jpg'
-        },
-        { 
-            name: 'Product 6', 
-            author: 'Author 6', 
-            url: '', 
-            stars: '★★★★☆', 
-            image: 'img/imagen-producto-6.jpg'
-        },
-        { 
-            name: 'Product 7', 
-            author: 'Author 7', 
-            url: '', 
-            stars: '★★★☆☆', 
-            image: 'img/imagen-producto-7.jpg'
-        },
-        { 
-            name: 'Product 8', 
-            author: 'Author 8', 
-            url: '',
-            stars: '★★★★★', 
-            image: 'img/imagen-producto-8.jpg'
-        },
-        { 
-            name: 'Product 9', 
-            author: 'Author 9', 
-            url: '', 
-            stars: '★★★★☆', 
-            image: 'img/imagen-producto-9.jpg'
-        },
-        { 
-            name: 'Product 10', 
-            author: 'Author 10', 
-            url: '', 
-            stars: '★★★☆☆', 
-            image: 'img/imagen-producto-10.jpg'
-        },
-        { 
-            name: 'Product 11', 
-            author: 'Author 11', 
-            url: '', 
-            stars: '★★★★★', 
-            image: 'img/imagen-producto-11.jpg'
-        },
-        { 
-            name: 'Product 12', 
-            author: 'Author 12', 
-            url: '', 
-            stars: '★★★★☆', 
-            image: 'img/imagen-producto-12.jpg'
-        },
-        { 
-            name: 'Product 13', 
-            author: 'Author 13', 
-            url: '', 
-            stars: '★★★☆☆', 
-            image: 'img/imagen-producto-13.jpg'
-        },
-        { 
-            name: 'Product 14', 
-            author: 'Author 14', 
-            url: '', 
-            stars: '★★★★★', 
-            image: 'img/imagen-producto-14.jpg'
-        },
-        { 
-            name: 'Product 15', 
-            author: 'Author 15', 
-            url: '', 
-            stars: '★★★★☆', 
-            image: 'img/imagen-producto-15.jpg'
-        }
+
+
+     const imageProducts = [
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-1.jpg', '★★★★☆', 'img/images/imagen-producto-1.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-2.jpg', '★★★★☆', 'img/images/imagen-producto-2.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-3.jpg', '★★★★☆', 'img/images/imagen-producto-3.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-4.jpg', '★★★★☆', 'img/images/imagen-producto-4.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-5.jpg', '★★★★☆', 'img/images/imagen-producto-5.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-6.jpg', '★★★★☆', 'img/images/imagen-producto-6.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-7.jpg', '★★★★☆', 'img/images/imagen-producto-7.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-8.jpg', '★★★★☆', 'img/images/imagen-producto-8.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-9.jpg', '★★★★☆', 'img/images/imagen-producto-9.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-10.jpg', '★★★★☆', 'img/images/imagen-producto-10.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-11.jpg', '★★★★☆', 'img/images/imagen-producto-11.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-12.jpg', '★★★★☆', 'img/images/imagen-producto-12.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-13.jpg', '★★★★☆', 'img/images/imagen-producto-13.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-14.jpg', '★★★★☆', 'img/images/imagen-producto-14.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-15.jpg', '★★★★☆', 'img/images/imagen-producto-15.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-16.jpg', '★★★★☆', 'img/images/imagen-producto-16.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-17.jpg', '★★★★☆', 'img/images/imagen-producto-17.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-18.jpg', '★★★★☆', 'img/images/imagen-producto-18.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-19.jpg', '★★★★☆', 'img/images/imagen-producto-19.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-20.jpg', '★★★★☆', 'img/images/imagen-producto-20.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-21.jpg', '★★★★☆', 'img/images/imagen-producto-21.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-22.jpg', '★★★★☆', 'img/images/imagen-producto-22.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-23.jpg', '★★★★☆', 'img/images/imagen-producto-23.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-24.jpg', '★★★★☆', 'img/images/imagen-producto-24.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-25.jpg', '★★★★☆', 'img/images/imagen-producto-25.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-26.jpg', '★★★★☆', 'img/images/imagen-producto-26.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-27.jpg', '★★★★☆', 'img/images/imagen-producto-27.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-28.jpg', '★★★★☆', 'img/images/imagen-producto-28.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-29.jpg', '★★★★☆', 'img/images/imagen-producto-29.jpg', 'Texturas'),
+        new Product('Textures', 'Textures Creator', 'img/images/imagen-producto-30.jpg', '★★★★☆', 'img/images/imagen-producto-30.jpg', 'Texturas'),
+        new Product('3D Cubes', 'RenderStudio', 'img/images/imagen-producto-31.jpg', '★★★★☆', 'img/images/imagen-producto-31.jpg', 'Render'),
+        new Product('3D Room', 'Render Creator', 'img/images/imagen-producto-32.jpg', '★★★★☆', 'img/images/imagen-producto-32.jpg', 'Render'),
+        new Product('Background Render', 'Textures Creator', 'img/images/imagen-producto-33.jpg', '★★★★☆', 'img/images/imagen-producto-33.jpg', 'Render'),
+        new Product('RenderMap', 'Textures Creator', 'img/images/imagen-producto-34.jpg', '★★★★☆', 'img/images/imagen-producto-34.jpg', 'Render'),
+        new Product('apple png', 'Textures Creator', 'img/images/imagen-producto-35.jpg', '★★★★☆', 'img/images/imagen-producto-35.jpg', 'PNG'),
+        new Product('smoke png', 'Textures Creator', 'img/images/imagen-producto-36.jpg', '★★★★☆', 'img/images/imagen-producto-36.jpg', 'PNG'),
+        new Product('flor png', 'Textures Creator', 'img/images/imagen-producto-37.jpg', '★★★★☆', 'img/images/imagen-producto-37.jpg', 'PNG'),
+        new Product('sky png', 'Textures Creator', 'img/images/imagen-producto-38.jpg', '★★★★☆', 'img/images/imagen-producto-38.jpg', 'PNG'),
+        new Product('background png', 'Textures Creator', 'img/images/imagen-producto-39.jpg', '★★★★☆', 'img/images/imagen-producto-39.jpg', 'PNG'),
+        new Product('the moon png', 'Textures Creator', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/images/imagen-producto-40.jpg', 'PNG'),
+
+        // Otros productos...
     ];
     
+     const videoProducts = [
+        new Product('Video 1', 'Author 1', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/videos/imagen-producto-1.jpg', 'Videos'),
+        new Product('Video 2', 'Author 1', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/videos/imagen-producto-2.jpg', 'Videos'),
+        new Product('Video 3', 'Author 1', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/videos/imagen-producto-3.jpg', 'Videos'),
+        new Product('Video 4', 'Author 1', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/videos/imagen-producto-4.jpg', 'Videos'),
+        new Product('Video 5', 'Author 1', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/videos/imagen-producto-5.jpg', 'Videos'),
+        new Product('Video 6', 'Author 1', 'img/images/imagen-producto-40.jpg', '★★★★☆', 'img/videos/imagen-producto-6.jpg', 'Videos'),
 
-  
+        // Otros productos de video...
+    ];
+ 
+     const fontProducts = [
+        new Product('Glore Spako', 'Alon Kelakon', 'download/fonts/glore-spako.zip', '★★★★☆','img/fonts/imagen-producto-1.jpg', 'Bold'),
+        // Otros productos de fuentes...
+    ];
+    
+     const softwareProducts = [
+        new Product('Software 1', 'Author 1', 'software/software-producto-1.exe', '★★★★☆', 'Software & More'),
+        // Otros productos de software...
+    ];
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    //Creo constante de la seccion store 
+
+    const imageStoreSection = document.querySelector('#image-store');
+    const videoStoreSection = document.querySelector('#videos-store');
+    const fontStoreSection = document.querySelector('#font-store');
+    const softwareStoreSection = document.querySelector('#software-store');
+
+
+     
+   
     function renderProducts(productList, productsToRender) {
         // Limpia el contenido actual de sección store 
         productList.innerHTML = '';
@@ -139,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="description">
                     <h3>${product.name}</h3>
                     <p class="author">${product.author}</p>
-                    <a href="${product.url}" download>Descargar</a>
+                    <a href="${product.url}" download><span class="material-symbols-outlined">download</span></a>
                     <p class="stars">${product.stars}</p>
                 </div>
             `;
@@ -150,12 +120,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Inicializar la lista de productos
-    renderProducts(storeSection, products);
+    // Obtiene el título de la página actual
+    const pageTitle = document.title;
+
+    if (pageTitle === 'Página de Imágenes') {
+        renderProducts(imageStoreSection, imageProducts);
+    } else if (pageTitle === 'Página de Videos') {
+        renderProducts(videoStoreSection, videoProducts);
+    } else if (pageTitle === 'Página de Fuentes') {
+        renderProducts(fontStoreSection, fontProducts);
+    } else if (pageTitle === 'Página de Software & More') {
+        renderProducts(softwareStoreSection, softwareProducts);
+    }
 
     // Obtenemos el input de búsqueda y lo almacenamos en una variable
     const searchInput = document.getElementById('buscador');
-    // obtenemos boton de categorias
-    const categoryButtons = document.querySelectorAll('.category-button');
+    
+
 
     // Escucha el evento de cambio en el input de búsqueda
     searchInput.addEventListener('input', function () {
@@ -163,19 +144,91 @@ document.addEventListener('DOMContentLoaded', function () {
         //Almacenamos lo que el usuario ingresa en el buscado en una variable
         const searchTerm = searchInput.value.toLowerCase();
         //Crea un nuevo Array identico a products pero que contenga solo los prodcutos que cumplan las condiciones
-        const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchTerm) || 
-        product.author.toLowerCase().includes(searchTerm));
-        renderProducts(storeSection, filteredProducts);
+        const activeProductsObj = getActiveProducts();
+        const activeProducts = activeProductsObj.activeProducts;
+        if (Array.isArray(activeProducts)) {
+            const filteredProducts = activeProducts.filter(product =>
+                product.name.toLowerCase().includes(searchTerm) ||
+                product.author.toLowerCase().includes(searchTerm)
+            );
+            
+            renderProducts(getActiveStoreSection(), filteredProducts);
+        } else {
+            console.error('activeProducts is not an array:', activeProducts);
+        }
+
     });
 
-        // Escucha el evento de clic en los botones de categoría
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const category = button.getAttribute('data-category');
-                const filteredByCategory = products.filter(product => product.category === category);
-                renderProducts(storeSection, filteredByCategory);
-            });
+    // obtenemos boton de categorias
+    const categoryButtons = document.querySelectorAll('.category-button');
+
+    function getActiveProducts() {
+        const pageTitle = document.title;
+        let activeProducts;
+    
+        if (pageTitle === 'Página de Imágenes') {
+
+            activeProducts = imageProducts;
+        } else if (pageTitle === 'Página de Videos') {
+
+            activeProducts = videoProducts;
+        } else if (pageTitle === 'Página de Fuentes') {
+
+            activeProducts = fontProducts;
+        } else if (pageTitle === 'Página de Software & More') {
+
+            activeProducts = softwareProducts;
+        }
+    
+        return { activeProducts };
+    }
+
+    function getActiveStoreSection() {
+        const pageTitle = document.title;
+        let activeSection;
+    
+        if (pageTitle === 'Página de Imágenes') {
+            activeSection = imageStoreSection;
+        } else if (pageTitle === 'Página de Videos') {
+            activeSection = videoStoreSection;
+        } else if (pageTitle === 'Página de Fuentes') {
+            activeSection = fontStoreSection;
+        } else if (pageTitle === 'Página de Software & More') {
+            activeSection = softwareStoreSection;
+        }
+    
+        return activeSection;
+    }
+
+    
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Obtén la categoría del botón clicado
+            const category = button.getAttribute('data-category');
+            
+            // Define una función para filtrar los productos por categoría
+            function filterProductsByCategory(products, category) {
+                return products.filter(product => product.category === category);
+            }
+
+            let filteredProducts = [];
+
+            // Determina la categoría y filtra los productos correspondientes
+            if (pageTitle === 'Página de Imágenes') {
+                filteredProducts = filterProductsByCategory(imageProducts, category);
+            } else if (pageTitle === 'Página de Videos') {
+                filteredProducts = filterProductsByCategory(videoProducts, category);
+            } else if (pageTitle === 'Página de Fuentes') {
+                filteredProducts = filterProductsByCategory(fontProducts, category);
+            } else if (pageTitle === 'Página de Software & More') {
+                filteredProducts = filterProductsByCategory(softwareProducts, category);
+            }
+
+            // Renderiza los productos filtrados
+            renderProducts(getActiveStoreSection(), filteredProducts);
         });
+    });
 
 });
 
