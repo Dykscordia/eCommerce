@@ -38,24 +38,33 @@
 
     </header>
 
-    <main class="main-store" >
-        <h2>Fonts</h2>
-
-        <div class="searching">
-            <span class="material-symbols-outlined">search</span>
-            <input type="search" id="buscador" name="q" placeholder="Buscar productos..." />
-        </div>
-
-        <div class="category-container">
-        <button class="category-button" data-category="Serif">Serif</button>
-        <button class="category-button" data-category="Gothic">Gothic</button>
-        <button class="category-button" data-category="Funny">Funny</button>
-        <button class="category-button" data-category="Bold">Bold</button>
-        </div>
-
-        <section id="font-store">
-            <!-- La lista de productos se generará dinámicamente desde el JavaScript -->
-        </section>
+    <main>
+        <form id="add-product-form">
+            <label for="product-name">Nombre del producto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+          
+            <label for="product-description">Descripción del producto:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+          
+            <label for="product-image">Imagen del producto:</label>
+            <input type="file" id="product-image" name="product-image" accept="image/*" required>
+          
+            <label for="product-author">Autor del producto:</label>
+            <input type="text" id="product-author" name="product-author" required>
+          
+            <label for="product-stars">Estrellas del producto:</label>
+            <select id="product-stars" name="product-stars" required>
+              <option value="">Selecciona una opción</option>
+              <option value="1">1 estrella</option>
+              <option value="2">2 estrellas</option>
+              <option value="3">3 estrellas</option>
+              <option value="4">4 estrellas</option>
+              <option value="5">5 estrellas</option>
+            </select>
+          
+            <button type="submit">Agregar producto</button>
+          </form>
+          
     </main>
 
     <script type="module" src="script.js"></script>

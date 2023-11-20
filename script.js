@@ -1,6 +1,10 @@
 
 class Product {
+
+    static idCounter = 1;
+
     constructor(name, author, url, stars, image, category) {
+        this.id = Product.idCounter++;
         this.name = name;
         this.author = author;
         this.url = url;
@@ -78,6 +82,8 @@ class Product {
         // Otros productos de software...
     ];
 
+    export { imageProducts, videoProducts, fontProducts, softwareProducts, Product };
+
 document.addEventListener('DOMContentLoaded', function () {
     
     //Creo constante de la seccion store 
@@ -103,15 +109,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Colocamos nuestro codigo html del producto dentro de ese div
             productElement.innerHTML = `
-                <div class="img-product">
-                    <img src="${product.image}" alt="${product.name}">
-                </div> 
-                <div class="description">
-                    <h3>${product.name}</h3>
-                    <p class="author">${product.author}</p>
-                    <a href="${product.url}" download><span class="material-symbols-outlined">download</span></a>
-                    <p class="stars">${product.stars}</p>
-                </div>
+            <a href="Ptemplate.html?productID=${encodeURIComponent(product.id)}">
+            <div class="img-product">
+                <img src="${product.image}" alt="${product.name}">
+            </div> 
+            <div class="description">
+                <h3>${product.name}</h3>
+                <p class="author">${product.author}</p>
+                <p class="stars">${product.stars}</p>
+            </div>
+        </a>
             `;
 
             // Agrega el elemento al contenedor productList
@@ -229,6 +236,16 @@ document.addEventListener('DOMContentLoaded', function () {
             renderProducts(getActiveStoreSection(), filteredProducts);
         });
     });
+
+
+
+
+
+
+
+
+
+
 
 });
 

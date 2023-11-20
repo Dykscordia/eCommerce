@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
 
 :root {
-    --blancoCrema: rgb(48, 48, 48); /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
-    --SecondaryColor: rgb(0, 0, 0);
-    --BgColor: rgb(238, 238, 238);
-    --TextColor: rgb(253, 253, 253);
-    --extracolor: rgb(0, 183, 255);
+    --blancoCrema: rgb(163, 163, 163); /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
+    --SecondaryColor: rgb(38, 136, 175);
+    --BgColor: rgb(27, 27, 27);
+    --TextColor: rgb(216, 216, 216);
+    --extracolor: rgb(255, 136, 0));
 }
 
 /*estilos generales en todo el documento*/
@@ -186,18 +186,24 @@ div.nav-icons a:hover span.material-symbols-outlined {
 
 .category-button {
     height: 30px;
-    width: 60px;
-    border: none;
+    width: 90px;
+    border: 2px solid var(--blancoCrema);
     border-radius: 10px;
     margin-right: 10px;
-    background-color: var(--SecondaryColor);
-    color: var(--TextColor);
+    background-color: var(--BgColor);
+    color: var(--blancoCrema);
+    font-weight: 800;
     cursor: pointer;
+    transition: all 0.3s ease;
+
     
 }
 .category-button:hover {
+    border: 2px solid var(--BgColor);
+    background-color: var(--blancoCrema);
+    color: var(--BgColor);
 
-        border: 2px solid var(--extracolor);
+
 }
 
 
@@ -332,3 +338,8 @@ div.nav-icons a:hover span.material-symbols-outlined {
     background-color: var(--SecondaryColor);
 }
 
+/*from*/
+
+label{
+    color: wheat;
+}
