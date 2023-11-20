@@ -201,7 +201,13 @@ main {
 
 
 #info h3 {
-    font-size: 80px;
+    font-size: 5vw; /* Utiliza vw en lugar de px */
+
+}
+
+#product-name {
+
+    max-height: 400px;
 }
 
 .author {
