@@ -44,7 +44,7 @@ a {
 
 h1 {
     color: var(--blancoCrema);
-    font-size: 25px;
+    font-size: 22px;
 }
 h2 {
     color: var(--blancoCrema);
@@ -61,20 +61,22 @@ h2 {
 /*Estilo de links del nav (tienda, gratis, nosotros)*/
 
 div.nav-link-container {
-    width: 800px; /* Ajusta este valor según el ancho máximo deseado */
+
+    width: 600px; /* Ajusta este valor según el ancho máximo deseado */
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 ul.nav-links {
 
-    margin-right: 20px;
     list-style: none; /* Quito viñetas de la lista*/
     
 }
 
 ul.nav-links li {
     display: inline; /* Ordenamos la lista de forma horizontal*/
-    margin: 50px;
-    
+    margin-right: 55px;
+
 }
 
 ul.nav-links li a {
@@ -84,6 +86,7 @@ ul.nav-links li a {
     transition: color 0.5s ease; /*Transicion color*/
 
 }
+
 
 /*Animacion de subrayado cuando situamos el mouse encima*/
 
