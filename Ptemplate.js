@@ -1,4 +1,4 @@
-import { imageProducts, videoProducts, fontProducts, softwareProducts } from './script.js';
+import { imageProducts, videoProducts, fontProducts, softwareProducts } from './productos.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     const productId = new URLSearchParams(window.location.search).get('productID');

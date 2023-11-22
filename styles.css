@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
 
 :root {
-    --blancoCrema: rgb(163, 163, 163); /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
+    --blancoCrema: #DADADA; /*Hago una color del variable para poder reemplazarla cuando quiera sin modificar el resto del codigo*/
     --SecondaryColor: rgb(38, 136, 175);
     --BgColor: rgb(27, 27, 27);
-    --TextColor: rgb(216, 216, 216);
+    --TextColor: #DADADA;
     --extracolor: rgb(255, 136, 0));
 }
 
@@ -346,3 +346,47 @@ div.nav-icons a:hover span.material-symbols-outlined {
 label{
     color: wheat;
 }
+
+#indexMain {
+
+    padding: 2%;
+    display: flex;
+    width: 100%;
+}
+
+.columnaLeft,
+.columnaRight {
+    flex: 1;
+    padding: 20px; /* Puedes ajustar el espacio interno según tus necesidades */
+    box-sizing: border-box;
+}
+
+
+
+#indexImage {
+    max-width: 100%; /* Asegurar que la imagen no exceda el ancho de su contenedor */
+    width: 900px;
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+#indexTitle {
+    color: var(--blancoCrema);
+    font-size: 96px;
+    margin-bottom: 20px;
+}
+
+#indexDescription {
+    color: #dadada9a;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#indexDescription a {
+    color: var(--blancoCrema);
+    text-decoration: none; /* Quitar el subrayado predeterminado del enlace */
+}
+
+#indexDescription a:hover {
+    color: var(--SecondaryColor);
+}
+
